@@ -3,3 +3,7 @@
 h5{
 	text-align: center;
 }
+
+tabela{
+	align-items: flex-end; 
+}
