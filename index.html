@@ -4,13 +4,310 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orkut - O seu mundo</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Globais e Reset */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: #e5edf5; /* Cor de fundo suave */
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh; /* Garante que o corpo ocupa a altura total da viewport */
+        }
+
+        .container {
+            width: 960px; /* Largura padrão do Orkut */
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: #004d80; /* Azul escuro */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #d1e2f7; /* Azul claro */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #c2d3e5;
+        }
+
+        .logo img {
+            height: 40px; /* Ajuste o tamanho do logo */
+            width: auto;
+        }
+
+        .search-bar {
+            display: flex;
+            flex-grow: 1; /* Ocupa o espaço restante */
+            gap: 5px;
+        }
+
+        .search-bar input[type="text"] {
+            border: 1px solid #a8c1da;
+            padding: 5px 10px;
+            border-radius: 3px;
+            flex-grow: 1;
+            font-size: 0.9em;
+        }
+
+        .search-bar button {
+            background-color: #4a75a7; /* Azul médio */
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .search-bar button:hover {
+            background-color: #3a6597;
+        }
+
+        .top-nav ul {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-nav a {
+            color: #333;
+            font-weight: 600;
+            padding: 5px 0;
+            white-space: nowrap; /* Evita quebra de linha em itens do menu */
+        }
+
+        .top-nav a:hover {
+            color: #004d80;
+            text-decoration: none;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            display: flex;
+            flex-grow: 1; /* Garante que a área principal ocupe o espaço restante */
+        }
+
+        aside {
+            background-color: #f7fbfd; /* Azul muito claro */
+            padding: 20px;
+            border-right: 1px solid #e5edf5;
+            box-sizing: border-box; /* Inclui padding na largura */
+        }
+
+        .sidebar-left {
+            width: 220px; /* Largura da sidebar esquerda */
+        }
+
+        .sidebar-right {
+            width: 180px; /* Largura da sidebar direita */
+            border-left: 1px solid #e5edf5;
+            border-right: none;
+        }
+
+        .profile-summary {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #d1e2f7;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #a8c1da;
+            margin-bottom: 10px;
+        }
+
+        .profile-summary h3 {
+            margin: 5px 0;
+            color: #004d80;
+        }
+
+        .profile-summary p {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .profile-summary ul {
+            text-align: left;
+        }
+
+        .profile-summary li {
+            margin-bottom: 5px;
+        }
+
+        .menu-sections h4 {
+            color: #004d80;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e5edf5;
+            padding-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .menu-sections li {
+            margin-bottom: 5px;
+        }
+
+        .main-content {
+            flex-grow: 1; /* Ocupa todo o espaço restante horizontalmente */
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .main-content h2 {
+            color: #4a75a7;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e5edf5;
+            padding-bottom: 10px;
+        }
+
+        .post-box {
+            background-color: #f0f6fc; /* Fundo suave para a caixa de postagem */
+            border: 1px solid #d1e2f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .post-box textarea {
+            width: calc(100% - 10px); /* 100% menos o padding */
+            min-height: 60px;
+            border: 1px solid #a8c1da;
+            border-radius: 3px;
+            padding: 5px;
+            font-family: 'Open Sans', sans-serif;
+            resize: vertical; /* Permite redimensionar verticalmente */
+        }
+
+        .post-box button {
+            align-self: flex-end; /* Alinha o botão à direita */
+            background-color: #4a75a7;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .post-box button:hover {
+            background-color: #3a6597;
+        }
+
+        .feed-item {
+            background-color: #f7fbfd;
+            border: 1px solid #e5edf5;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .feed-item h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #004d80;
+            font-size: 1em;
+        }
+
+        .feed-item p {
+            margin-bottom: 10px;
+        }
+
+        .timestamp {
+            font-size: 0.8em;
+            color: #999;
+            text-align: right;
+            display: block; /* Garante que o timestamp fique em sua própria linha */
+        }
+
+        .ads-section, .birthday-section {
+            background-color: #f0f6fc;
+            border: 1px solid #d1e2f7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .ads-section h4, .birthday-section h4 {
+            color: #4a75a7;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #d1e2f7;
+            padding-bottom: 5px;
+            font-size: 1em;
+        }
+
+        .ads-section p, .birthday-section p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #d1e2f7;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #555;
+            border-top: 1px solid #c2d3e5;
+            margin-top: auto; /* Empurra o rodapé para baixo se o conteúdo for curto */
+        }
+
+        .footer-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .footer-nav a {
+            color: #555;
+            font-weight: 400;
+        }
+
+        .footer-nav a:hover {
+            color: #004d80;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="https://static.thenounproject.com/png/1572979-200.png" alt="Logo Orkut" width="100">
-                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Orkut_logo.svg/1200px-Orkut_logo.svg.png" alt="Logo Orkut">
+            </div>
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar no Orkut...">
                 <button>Pesquisar</button>
@@ -20,7 +317,7 @@
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Recados</a></li>
                     <li><a href="#">Amigos</a></li>
-                    <li><a="#">Comunidades</a></li>
+                    <li><a href="#">Comunidades</a></li>
                     <li><a href="#">Aplicativos</a></li>
                     <li><a href="#">Perfil</a></li>
                     <li><a href="#">Sair</a></li>
@@ -76,17 +373,25 @@
                     <p>Novo tópico no fórum: "Melhores músicas dos anos 90"</p>
                     <span class="timestamp">Há 15 minutos</span>
                 </div>
+                <div class="feed-item">
+                    <h4>Nome de Outro Amigo atualizou o perfil:</h4>
+                    <p>Adicionou novas fotos no álbum "Viagem para a Praia".</p>
+                    <span class="timestamp">Há 30 minutos</span>
+                </div>
                 </section>
 
             <aside class="sidebar-right">
                 <div class="ads-section">
                     <h4>Anúncios Patrocinados</h4>
-                    <p>Anúncio 1</p>
-                    <p>Anúncio 2</p>
+                    <p>Anuncie aqui!</p>
+                    <p>Encontre o amor da sua vida no Orkut Dating.</p>
                 </div>
                 <div class="birthday-section">
                     <h4>Aniversariantes</h4>
                     <p>Nenhum amigo faz aniversário hoje.</p>
+                    </div>
+                <div class="ads-section"> <h4>Orkut Recomenda</h4>
+                    <p>Conheça as comunidades mais populares da semana!</p>
                 </div>
             </aside>
         </main>
