@@ -1,43 +1,104 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeepSite | Build with AI ✨</title>
-    <meta name="theme-color" content="#000000" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="DeepSite" />
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DeepSite | Build with AI ✨" />
-    <meta
-      name="twitter:description"
-      content="DeepSite is a web development tool that
-    helps you build websites with AI, no code required. Let's deploy your
-    website with DeepSite and enjoy the magic of AI."
-    />
-    <meta name="twitter:image" content="/banner.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DeepSite | Build with AI" />
-    
-    <meta property="og:image" content="/banner.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" crossorigin src="/assets/index-DVHcu_r5.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DygUTOMv.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Minha Loja</h1>
+            <nav>
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Bem-vindo à Nossa Loja!</h2>
+                <p>Encontre os melhores produtos com as melhores ofertas.</p>
+                <a href="#produtos" class="btn">Ver Produtos</a>
+            </div>
+        </section>
+
+        <section id="produtos" class="produtos-section">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                <div class="produto-grid">
+                    <div class="produto-item">
+                        <img src="https://via.placeholder.com/200x150" alt="Produto 1">
+                        <h3>Nome do Produto 1</h3>
+                        <p>Descrição breve do produto 1.</p>
+                        <span class="preco">R$ 99,99</span>
+                        <button class="btn-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://via.placeholder.com/200x150" alt="Produto 2">
+                        <h3>Nome do Produto 2</h3>
+                        <p>Descrição breve do produto 2.</p>
+                        <span class="preco">R$ 149,90</span>
+                        <button class="btn-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="produto-item">
+                        <img src="https://via.placeholder.com/200x150" alt="Produto 3">
+                        <h3>Nome do Produto 3</h3>
+                        <p>Descrição breve do produto 3.</p>
+                        <span class="preco">R$ 75,00</span>
+                        <button class="btn-adicionar">Adicionar ao Carrinho</button>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="promocoes" class="promocoes-section">
+            <div class="container">
+                <h2>Promoções Imperdíveis!</h2>
+                <p>Confira nossas ofertas especiais por tempo limitado.</p>
+                </div>
+        </section>
+
+        <section id="sobre" class="sobre-section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Somos uma loja dedicada a oferecer produtos de alta qualidade e um excelente atendimento ao cliente.</p>
+            </div>
+        </section>
+
+        <section id="contato" class="contato-section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma dúvida? Fale conosco!</p>
+                <form>
+                    <input type="text" placeholder="Seu Nome">
+                    <input type="email" placeholder="Seu Email">
+                    <textarea placeholder="Sua Mensagem"></textarea>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Minha Loja Online. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
