@@ -114,10 +114,10 @@ section {
 }
 
 .hero {
-    background-image: url("img/banner.jpg")
+    background-image: src="img/banner.jpg";
     background-color: #5cb85c;
     color: #fff;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .hero h2 {
