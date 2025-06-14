@@ -114,6 +114,7 @@ section {
 }
 
 .hero {
+    background-image: url("img/banner.jpg")
     background-color: #5cb85c;
     color: #fff;
     padding: 100px 0;
