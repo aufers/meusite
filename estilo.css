@@ -163,7 +163,7 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
 }
 
 .produto-item img {
@@ -190,7 +190,7 @@ section {
     font-weight: bold;
     color: #28a745; /* Cor verde para preço */
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .btn-adicionar {
