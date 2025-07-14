@@ -2,8 +2,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #e6e6e6;
 }
-*area-cabecalho {
+#area-cabecalho {
  background-color: #f7b600; 
  padding: 15px;
  text-align: center; 
+}
+
+#area-logo, #area-menu {
+  padding: 10px;
 }
