@@ -15,11 +15,13 @@ body {
 #principal{
   width: 300px;
   margin: 0px;
+  float: left;
 }
 
 #lateral{
   width: 200px;
   margin: 0px;
+  float: right;
 }
 
 h1{
