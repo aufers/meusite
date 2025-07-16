@@ -13,11 +13,11 @@ body {
 }
 
 #principal{
-  padding: 0px;
+  width: 0px;
 }
 
 #lateral{
-  padding: 300px;
+  width: 300px;
 }
 
 h1{
