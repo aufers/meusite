@@ -14,10 +14,12 @@ body {
 
 #principal{
   width: 0px;
+  margin: 0px
 }
 
 #lateral{
   width: 300px;
+  margin: 0px;
 }
 
 h1{
