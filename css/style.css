@@ -12,6 +12,14 @@ body {
   padding: 6px;
 }
 
+#principal{
+  padding: 0px;
+}
+
+#lateral{
+  padding: 100px;
+}
+
 h1{
   color: #4e4e4e;
 }
