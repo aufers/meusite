@@ -1,7 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
 background-color: #d7edf4;
-background-image: url("img/fundoazul.jpg");
+background-image: url("img/fundoclaro.jpg");
 background-size: cover; /* Faz a imagem cobrir todo o elemento */
 background-position: center; /* Centraliza a imagem */
 }
