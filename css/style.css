@@ -65,7 +65,7 @@ svg text {
 	animation: stroke 5s infinite alternate;
 	stroke-width: 2;
 	stroke: #365FA0;
-	font-size: 100px;
+	font-size: 50px;
 }
 @keyframes stroke {
 	0%   {
@@ -80,5 +80,5 @@ svg text {
 	}
 }
 
-.wrapper {background-color: #FFFFFF};
+.wrapper {background-color: #a15ea1};
 
