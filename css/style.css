@@ -1,8 +1,12 @@
 body {
   font-family: 'Poppins', sans-serif;
 background-color: #d7edf4;
+background-image: url("img/fundoazul.jpg");
+background-size: cover; /* Faz a imagem cobrir todo o elemento */
+background-position: center; /* Centraliza a imagem */
 }
 
+ 
 #area-cabecalho {
 background-color: #a15ea1;
  padding: 1px;
