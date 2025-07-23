@@ -49,9 +49,8 @@ h1{
 }
 
 table {
-    max-width: 100%;
-    overflow-x: auto;
-    font-size: 4px;
+   width: 100%;
+   padding: 8px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
