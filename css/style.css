@@ -51,6 +51,7 @@ h1{
 table {
    width: 100%;
    padding: 8px;
+   font-size: 8px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
