@@ -52,6 +52,7 @@ table {
    width: 100%;
    padding: 8px;
    font-size: 12px;
+   text-align: justify;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
