@@ -6,7 +6,7 @@ body {
 
  
 #area-cabecalho {
-background-color: #D2B48C;
+background-color: #6A5ACD;
  padding: 1px;
  text-align: center; 
 }
@@ -80,5 +80,5 @@ svg text {
 	}
 }
 
-.wrapper {background-color: #D2B48C};
+.wrapper {background-color: #6A5ACD};
 
