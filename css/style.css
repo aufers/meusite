@@ -63,8 +63,8 @@ svg {
 }
 svg text {
 	animation: stroke 5s infinite alternate;
-	stroke-width: 2;
-	stroke: #365FA0;
+	stroke-width: 3;
+	stroke: #FFFF00;
 	font-size: 50px;
 }
 @keyframes stroke {
